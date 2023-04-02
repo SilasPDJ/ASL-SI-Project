@@ -1,55 +1,65 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Libras e ASL</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+    <title>Libras e ASL</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
 </head>
+
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="#" class="hov"> <i class="fa-solid fa-house" ></i> Início </a></li>
-				<li><a href="#" class="hov"><i class="fa-sharp fa-solid fa-hands-asl-interpreting"></i> Aprenda ASL</a></li>
-				<li><a href="#" class="hov"><i class="fa-solid fa-plus"></i> Recursos</a></li>
-				<li><a href="#" class="hov"><i class="fa-solid fa-question"></i> Sobre Nós</a></li>
-				<li><a href="#" class="hov"><i class="fa-solid fa-phone"></i> Fale Conosco</a></li>
-			</ul>
-		</nav>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" class="hov"> <i class="fa-solid fa-house"></i> Início </a></li>
+                <li><a href="#" class="hov"><i class="fa-sharp fa-solid fa-hands-asl-interpreting"></i> Aprenda ASL</a>
+                </li>
+                <li><a href="#" class="hov"><i class="fa-solid fa-plus"></i> Recursos</a></li>
+                <li><a href="#" class="hov"><i class="fa-solid fa-question"></i> Sobre Nós</a></li>
+                <li><a href="#" class="hov"><i class="fa-solid fa-phone"></i> Fale Conosco</a></li>
+            </ul>
+        </nav>
 
-		<div class="logoIMG">
-			<img class="imgLogo" src="img/logo.png" alt="">
-		</div>
+        <div class="logoIMG">
+            <img class="imgLogo" src="img/logo.png" alt="">
+        </div>
 
-		<div class="traduza">
-			<h2 class="h2traduza"> <i class="fa-solid fa-language"></i> &nbsp Traduza Libras para ASL</h2>
-		</div>
+        <div class="traduza">
+            <h2 class="h2traduza"> <i class="fa-solid fa-language"></i> &nbsp Traduza Libras para ASL</h2>
+        </div>
+        <label for="translatorOptions">Selecione o Idioma</label>
+        <select id="translatorOptions">
+            <option value="1">Português</option>
+            <option value="2">Inglês</option>
+        </select>
 
-		<div class="textInsert">
-				<textarea placeholder="Digitar texto"></textarea>
-		</div>
+        <div class="textInsert">
+            <textarea id="translator-textarea"></textarea>
+        </div>
 
-		<div class="videos">
-			<iframe width="430" height="260" src="https://www.youtube.com/embed/Vmz4oUZZ190?autoplay=1&mute=1"></iframe>
-			<!-- <button class="setaTroca">
+        <div class="videos">
+            <iframe width="430" height="260" src="https://www.youtube.com/embed/Vmz4oUZZ190?autoplay=1&mute=1"></iframe>
+            <!-- <button class="setaTroca">
 				<i class="fa-solid fa-arrow-right-arrow-left"></i>
 			</button> -->
-			<iframe width="430" height="260" src="https://www.youtube.com/embed/d23nTpOU14I?autoplay=1&mute=1"></iframe>
-		</div>
+            <iframe width="430" height="260" src="https://www.youtube.com/embed/d23nTpOU14I?autoplay=1&mute=1"></iframe>
+        </div>
 
-	</header>
+    </header>
 
-	<main>
-		<section>
-			<h2 class="welcomeLibras">Bem-vindo ao Libras e ASL</h2>
-			<h3 class="textDesc">Um tradutor fácil e interativo para você!<br></h3>
-			<p class="text desc2">Torne-se fluente em ambas as línguas e abra portas para uma comunicação mais inclusiva e acessível.</p>
-		</section>
-	</main>
+    <main>
+        <section>
+            <h2 class="welcomeLibras">Bem-vindo ao Libras e ASL</h2>
+            <h3 class="textDesc">Um tradutor fácil e interativo para você!<br></h3>
+            <p class="text desc2">Torne-se fluente em ambas as línguas e abra portas para uma comunicação mais inclusiva
+                e acessível.</p>
+        </section>
+    </main>
 
-	<footer>
-		<p>Libras e ASL &copy; 2023</p>
-	</footer>
-
+    <footer>
+        <p>Libras e ASL &copy; 2023</p>
+    </footer>
+    <script src="js/index.js"></script>
 </body>
+
 </html>
