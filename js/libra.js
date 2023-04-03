@@ -1,4 +1,4 @@
-// console.log(videosLibras.getAttribute("src"));
+// https://www.youtube.com/@nhojeal2225/videos
 
 const YOUTUBE = "https://www.youtube.com/embed/";
 // TODO: improve transform dynamically
@@ -6,13 +6,28 @@ const YOUTUBE = "https://www.youtube.com/embed/";
 let arrayLibras = {
     "BOM DIA": "sX458sUdYMc",
     "BOA TARDE": "FGWeEjAxoD4",
+    OBRIGADO: "fJDIKh8059c",
     // "BOA NOITE": "https://youtu.be/OOxzeRXzg5M",
 };
 
 let arrayAsl = {
     "BOM DIA": "VjAORB0NEaw",
     "BOA TARDE": "Xgn5_WGB9JI",
+    OBRIGADO: "IvRwNLNR4_w",
 };
+
+function addOptionToSelect(selectId, optionText) {
+    const select = document.getElementById(selectId);
+    const newOption = document.createElement("option");
+    const idNum = select.options.length + 1; // get the new option ID by adding 1 to the number of existing options
+    newOption.setAttribute("value", `option${idNum}`); // set the value attribute to the new option ID
+    newOption.textContent = optionText;
+    select.appendChild(newOption);
+}
+
+for (opt in arrayAsl) {
+    addOptionToSelect("textTranslated-portuguese", opt);
+}
 
 // create a method that downloads the links in the arrays above getting the values of the arrays and save them in datasource/videos project
 
@@ -34,8 +49,8 @@ function getNewIframe(id, url) {
     return iframe;
 }
 
-function selectTextToTranslate() {
-    let textTranslated = document.querySelector("#textTranslated");
+function selectTextToTranslate(event) {
+    let textTranslated = event.target;
     let value = textTranslated.value;
     let optionElement = textTranslated.querySelector(
         `option[value="${value}"]`
@@ -52,8 +67,10 @@ function selectTextToTranslate() {
     );
 }
 
-document
-    .querySelector("#textTranslated")
-    .addEventListener("change", selectTextToTranslate);
+for (let id of ["textTranslated-portuguese", "textTranslated-english"]) {
+    document
+        .querySelector(`#${id}`)
+        .addEventListener("change", selectTextToTranslate);
+}
 
 // downloadVideos(videoUrls);

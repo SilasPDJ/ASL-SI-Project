@@ -21,6 +21,8 @@ function translatorOptionsAddPlaceHolder() {
     }
 }
 
+
+
 // translatorOptionsAddPlaceHolder();
 
 //função que tr
